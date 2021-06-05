@@ -1,0 +1,21 @@
+.header {
+	background-color: $grey01;
+	color: $grey02;
+	display: flex;
+	justify-content: space-between;
+	height: 12vw;
+
+	&_logo {
+		height: 12vw;
+	}
+
+	&_title {
+		padding: 10px;
+		font-size: 3vw;
+	}
+
+	&_info {
+		font-size: 2vw;
+		padding: 10px;
+	}
+}
