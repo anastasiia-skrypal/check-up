@@ -44,22 +44,24 @@
 			@include icon-styles;
 		}
 		content: icon-char($filename);
-		font-size: 30px;
-		height: 50px;
-		width: 50px;
+		font-size: 3vw;
+		height: 6vw;
+		width: 6vw;
 		display: block;
 		transform: translate(25%, 0);
 		background-color: $white01;
 		border-radius: 50%;
 		text-align: center;
-		line-height: 50px;
+		line-height: 6vw;
 		box-shadow: 2px 2px 5px  $red03, -3px -2px 3px $white02;
 	}
 }
 
 .nav_checkup {
 	@include icon(phonendoscope);
+	text-align: center;
 }
 .nav_profile {
 	@include icon(user);
+	text-align: center;
 }

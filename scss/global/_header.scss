@@ -19,3 +19,26 @@
 		padding: 10px;
 	}
 }
+
+.authorization {
+	background: url(../img/authoriz.png) no-repeat top #f2f3fc;
+	background-size: 110%;
+
+	@include respond-to(mobile) {
+		background: url(../img/authoriz.png) no-repeat contain #f2f3fc;
+		background-size: 150%;
+	}
+
+
+	.header_authorization {
+		color: $grey02;
+		display: flex;
+		justify-content: space-between;
+		height: 12vw;
+		background-color: none;
+	}
+
+	.main_authorization {
+		padding: 5vw 5vw;
+	}
+}

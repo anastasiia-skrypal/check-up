@@ -7,66 +7,71 @@
 		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
-		<header class="header">
-			<div class="header_logo">
-				<img src="img/logo.jpg" alt="forst cross" class="logo_img">
-			</div>
-			<h1 class="header_title">Автоматизированная система медицинского контроля</h1>
-			<div class="header_info">
-				<p class="header_article">DevTerminal</p>
-				<p class="header_article">192.168.1.137</p>
-			</div>
-		</header>
-		<main class="main">
-			<p class="main_description">
-				Для авторизации в системе введите <span class="description_accent">табельный номер</span> или <span class="description_accent">приложите карту к считывателю</span> терминала до характерного сигнала.
-			</p>
-			<form class="dial_form" method="POST" action="/feedback.php">
-				<ul class="dial_desktop">
-					<li class="dial_item">
-						<a href="" class="dial_link">1</a>
-					</li>
-					<li class="dial_item">
-						<a href="" class="dial_link">2</a>
-					</li>
-					<li class="dial_item">
-						<a href="" class="dial_link">3</a>
-					</li>
-					<li class="dial_item">
-						<a href="" class="dial_link">4</a>
-					</li>
-					<li class="dial_item">
-						<a href="" class="dial_link">5</a>
-					</li>
-					<li class="dial_item">
-						<a href="" class="dial_link">6</a>
-					</li>
-					<li class="dial_item">
-						<a href="" class="dial_link">7</a>
-					</li>
-					<li class="dial_item">
-						<a href="" class="dial_link">8</a>
-					</li>
-					<li class="dial_item">
-						<a href="" class="dial_link">9</a>
-					</li>
-					<li class="dial_item">
-						<a href="" class="dial_link">0</a>
-					</li>
-					<li class="dial_item">
-						<a href="" class="dial_link">П</a>
-					</li>
-					<li class="dial_item">
-						<a href="" class="dial_link">00</a>
-					</li>
-				</ul>
-				<input type="number" placeholder="Введите номер" class="dial_input">
-				<div class="dial_error">
-					<p class="error_description">Номер не найден!</p>
-					<p class="error_description">Повторите попытку!</p>
+		<div class="authorization">
+			<header class="header_authorization">
+				<div class="header_logo">
+					<img src="img/logo.jpg" alt="forst cross" class="logo_img">
 				</div>
-				<button class="button dial_button">Авторизоваться</button>
-			</form>
-		</main>
+				<div class="header_info">
+					<p class="header_article">DevTerminal</p>
+					<p class="header_article">192.168.1.137</p>
+				</div>
+			</header>
+			<main class="main_authorization">
+				<div class="avthorization">
+					<form class="dial_form" method="POST" action="/feedback.php">
+						<p class="title">Автоматизированная система медицинского контроля</p>
+						<p class="main_description">
+							Для авторизации в системе введите <span class="description_accent">табельный номер</span> или <span class="description_accent">приложите карту к считывателю</span> терминала до характерного сигнала.
+						</p>
+						<input type="number" placeholder="Введите номер" class="dial_input">
+						<div class="dial_error">
+							<p class="error_description">Номер не найден!</p>
+							<p class="error_description">Повторите попытку!</p>
+						</div>
+						<button class="button dial_button">Авторизоваться</button>
+					</form>
+					<ul class="dial_desktop">
+						<li class="dial_item">
+							<a href="" class="dial_link">1</a>
+						</li>
+						<li class="dial_item">
+							<a href="" class="dial_link">2</a>
+						</li>
+						<li class="dial_item">
+							<a href="" class="dial_link">3</a>
+						</li>
+						<li class="dial_item">
+							<a href="" class="dial_link">4</a>
+						</li>
+						<li class="dial_item">
+							<a href="" class="dial_link">5</a>
+						</li>
+						<li class="dial_item">
+							<a href="" class="dial_link">6</a>
+						</li>
+						<li class="dial_item">
+							<a href="" class="dial_link">7</a>
+						</li>
+						<li class="dial_item">
+							<a href="" class="dial_link">8</a>
+						</li>
+						<li class="dial_item">
+							<a href="" class="dial_link">9</a>
+						</li>
+						<li class="dial_item">
+							<a href="" class="dial_link">0</a>
+						</li>
+						<li class="dial_item">
+							<a href="" class="dial_link">П</a>
+						</li>
+						<li class="dial_item">
+							<a href="" class="dial_link">00</a>
+						</li>
+					</ul>
+				</div>
+				
+			</main>
+		</div>	
 	</body>
 </html>
