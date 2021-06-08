@@ -267,20 +267,21 @@ body {
 @media screen and (max-width: 1023px) {
   .profile_photo {
     float: none;
-    line-height: 45vw;
-    height: 45vw;
-    width: 45vw;
+    line-height: 25vw;
+    height: 25vw;
+    width: 25vw;
     position: relative;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
         -ms-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
+    margin-top: -6vw;
   }
 }
 
 .profile .title {
   font-size: 4vw;
-  margin-left: 40vw;
+  margin-left: 50vw;
 }
 
 .profile .title::after {
@@ -291,9 +292,26 @@ body {
 
 @media screen and (max-width: 1023px) {
   .profile .title {
-    margin: 5vw 0 0;
+    margin: 3vw 0 0;
     text-align: center;
-    line-height: 6vw;
+    line-height: 5vw;
+  }
+}
+
+.profile .title_result {
+  text-align: left;
+  margin: 5px;
+  font-size: -webkit-calc( 12px + 1vw);
+  font-size: calc( 12px + 1vw);
+}
+
+@media screen and (max-width: 1023px) {
+  .profile .title_result {
+    margin: 5px 0 0;
+    font-size: -webkit-calc( 14px + 1vw);
+    font-size: calc( 14px + 1vw);
+    line-height: -webkit-calc( 16px + 1vw);
+    line-height: calc( 16px + 1vw);
   }
 }
 
@@ -367,6 +385,7 @@ body {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  margin-top: -10vw;
 }
 
 @media screen and (max-width: 1023px) {
@@ -395,6 +414,12 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.avthorization .title {
+  font-size: -webkit-calc(16px + 2vw);
+  font-size: calc(16px + 2vw);
+  margin-top: -5vw;
 }
 
 @media screen and (max-width: 1023px) {
@@ -452,9 +477,40 @@ body {
   }
 }
 
+.avthorization .dial_button {
+  bottom: 5vw;
+}
+
 @media screen and (max-width: 1023px) {
   .avthorization .dial_button {
-    margin-top: 15vw;
+    bottom: 10vw;
+  }
+}
+
+.examination {
+  position: absolute;
+  left: 20vw;
+  bottom: 14vw;
+}
+
+.sign_sent {
+  position: absolute;
+  bottom: 14vw;
+  left: 60vw;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+@media screen and (max-width: 1023px) {
+  .sign_sent {
+    padding: 10px 2vw;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+        -ms-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    position: absolute;
+    bottom: 10vw;
   }
 }
 
