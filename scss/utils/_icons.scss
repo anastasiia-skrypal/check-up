@@ -46,7 +46,9 @@
 		content: icon-char($filename);
 		font-size: 3vw;
 		height: 6vw;
+		max-height: 75px;
 		width: 6vw;
+		max-width: 75px;
 		display: block;
 		transform: translate(25%, 0);
 		background-color: $white01;
@@ -54,6 +56,7 @@
 		text-align: center;
 		line-height: 6vw;
 		box-shadow: 2px 2px 5px  $red03, -3px -2px 3px $white02;
+
 	}
 }
 

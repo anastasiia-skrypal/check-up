@@ -1,17 +1,20 @@
 .main {
 	background: linear-gradient($pink02, $pink01);
-	padding: 5vw 10vw;
-	height: calc(100% - 15vw);
-
+	padding: 3vw 10vw;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	top: 8vw;
 	@include respond-to(mobile) {
 		padding: 10vw 10vw;
 	}
 }
-
+ 
 .title {
 	color: $pink03;
 	font-size: 2.6vw;
-	margin-bottom: 3vw;
+	margin-bottom: 2vw;
 
 	@include respond-to(mobile) {
 		font-size: 4vw;
@@ -21,18 +24,18 @@
 
 .description_article {
 	color: $grey03;
-	font-size: 2.2vw;
+	font-size:calc(12px + 1vw);
 	margin-bottom: 3vw;
 
 	@include respond-to(mobile) {
-		font-size: 3.5vw;
+		font-size:calc(12px + 1.5vw);
 		margin-bottom: 5vw;
 	}
 }
 
 .result {
 	display: inline-block;
-	margin-top: 5vw;
+	margin-top: 20px;
 	font-size: 2.2vw;
 	color: $pink03;
 	background-color: $grey01;
@@ -59,7 +62,7 @@
 	min-width: 20vw;
 	font-size: 2.2vw;
 	color: $white01;
-	margin-top: 5vw;
+	margin-top: 20px;
 	position: relative;
 	left: 50%;
 	transform: translate(-50%, 0);
@@ -72,25 +75,27 @@
 
 .nav {
 
-	position: relative;
-	bottom: 0;
-
 	&_list {
-		position: relative;
-		margin-top: 5vw;
+		position: absolute;
+		bottom: 0;
 		display: flex;
 		justify-content: space-between;
+		margin-bottom: 20px;
 
 		@include respond-to(mobile) {
 			margin-top: 15vw;
 		}
+
+		.nav_checkup {
+			margin-right: 60vw;
+		}
+
 	}
 
 
 	&_link {
 		font-size: 2vw;
 		color: $pink03;
-	
 	}
 }
 
@@ -134,22 +139,46 @@
 			line-height: 6vw;
 		}
 	}
+}
 
-	.result {
-		left: 0;
-		transform: translate(0, 0);
-		padding: 1.5vw 6vw;
+.result {
+	position: absolute;
+	bottom: 15vw;
+	left: 50%;
+	transform: translate(-50%, 0);
+	padding: 10px 6vw;
 
-		@include respond-to(mobile) {
-			display: none;
-		}
+	@include respond-to(mobile) {
+		display: none;
+	}
+}
+
+.button {
+	display: inline-block;
+	padding: 10px 2vw;
+	left: 50%;
+	transform: translate(-50%, 0);
+	position: absolute;
+	bottom: 10vw;
+}
+
+.posttrip {
+	bottom: 17vw;
+	@include respond-to(mobile) {
+		bottom: 26vw;
 	}
 
-	.button {
-		display: inline-block;
-		padding: 1.5vw 2vw;
-		left: 45%;
-		transform: translate(-45%, 0);
+}
+.preshift {
+	bottom: 12vw;
+	@include respond-to(mobile) {
+		bottom: 18vw;
+	}
+}
+.postshift {
+	bottom: 7vw;
+	@include respond-to(mobile) {
+		bottom: 10vw;
 	}
 }
 

@@ -24,7 +24,9 @@
   content: "";
   font-size: 3vw;
   height: 6vw;
+  max-height: 75px;
   width: 6vw;
+  max-width: 75px;
   display: block;
   -webkit-transform: translate(25%, 0);
       -ms-transform: translate(25%, 0);
@@ -46,7 +48,9 @@
   content: "";
   font-size: 3vw;
   height: 6vw;
+  max-height: 75px;
   width: 6vw;
+  max-width: 75px;
   display: block;
   -webkit-transform: translate(25%, 0);
       -ms-transform: translate(25%, 0);
@@ -85,6 +89,12 @@ img {
 body {
   font-family: CenturyGothic, sans-serif;
   background-color: #f2f3fc;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .hidden {
@@ -107,9 +117,12 @@ body {
   background: -webkit-gradient(linear, left top, left bottom, from(#ddc5ce), to(#f2f3fc));
   background: -o-linear-gradient(#ddc5ce, #f2f3fc);
   background: linear-gradient(#ddc5ce, #f2f3fc);
-  padding: 5vw 10vw;
-  height: -webkit-calc(100% - 15vw);
-  height: calc(100% - 15vw);
+  padding: 3vw 10vw;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  top: 8vw;
 }
 
 @media screen and (max-width: 1023px) {
@@ -121,7 +134,7 @@ body {
 .title {
   color: #80060b;
   font-size: 2.6vw;
-  margin-bottom: 3vw;
+  margin-bottom: 2vw;
 }
 
 @media screen and (max-width: 1023px) {
@@ -133,20 +146,22 @@ body {
 
 .description_article {
   color: #7a6767;
-  font-size: 2.2vw;
+  font-size: -webkit-calc(12px + 1vw);
+  font-size: calc(12px + 1vw);
   margin-bottom: 3vw;
 }
 
 @media screen and (max-width: 1023px) {
   .description_article {
-    font-size: 3.5vw;
+    font-size: -webkit-calc(12px + 1.5vw);
+    font-size: calc(12px + 1.5vw);
     margin-bottom: 5vw;
   }
 }
 
 .result {
   display: inline-block;
-  margin-top: 5vw;
+  margin-top: 20px;
   font-size: 2.2vw;
   color: #80060b;
   background-color: #f2f3fc;
@@ -182,7 +197,7 @@ body {
   min-width: 20vw;
   font-size: 2.2vw;
   color: #ffffff;
-  margin-top: 5vw;
+  margin-top: 20px;
   position: relative;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
@@ -198,14 +213,9 @@ body {
   }
 }
 
-.nav {
-  position: relative;
-  bottom: 0;
-}
-
 .nav_list {
-  position: relative;
-  margin-top: 5vw;
+  position: absolute;
+  bottom: 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -214,12 +224,17 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 @media screen and (max-width: 1023px) {
   .nav_list {
     margin-top: 15vw;
   }
+}
+
+.nav_list .nav_checkup {
+  margin-right: 60vw;
 }
 
 .nav_link {
@@ -282,27 +297,61 @@ body {
   }
 }
 
-.profile .result {
-  left: 0;
-  -webkit-transform: translate(0, 0);
-      -ms-transform: translate(0, 0);
-          transform: translate(0, 0);
-  padding: 1.5vw 6vw;
+.result {
+  position: absolute;
+  bottom: 15vw;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  padding: 10px 6vw;
 }
 
 @media screen and (max-width: 1023px) {
-  .profile .result {
+  .result {
     display: none;
   }
 }
 
-.profile .button {
+.button {
   display: inline-block;
-  padding: 1.5vw 2vw;
-  left: 45%;
-  -webkit-transform: translate(-45%, 0);
-      -ms-transform: translate(-45%, 0);
-          transform: translate(-45%, 0);
+  padding: 10px 2vw;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  position: absolute;
+  bottom: 10vw;
+}
+
+.posttrip {
+  bottom: 17vw;
+}
+
+@media screen and (max-width: 1023px) {
+  .posttrip {
+    bottom: 26vw;
+  }
+}
+
+.preshift {
+  bottom: 12vw;
+}
+
+@media screen and (max-width: 1023px) {
+  .preshift {
+    bottom: 18vw;
+  }
+}
+
+.postshift {
+  bottom: 7vw;
+}
+
+@media screen and (max-width: 1023px) {
+  .postshift {
+    bottom: 10vw;
+  }
 }
 
 .dial_desktop {
@@ -420,21 +469,37 @@ body {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 12vw;
+  height: 8vw;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .header_logo {
-  height: 12vw;
+  height: 8vw;
 }
 
 .header_title {
   padding: 10px;
-  font-size: 3vw;
+  font-size: 2.5vw;
+}
+
+@media screen and (max-width: 1023px) {
+  .header_title {
+    padding: 5px 10px;
+  }
 }
 
 .header_info {
-  font-size: 2vw;
+  font-size: 1.8vw;
   padding: 10px;
+}
+
+@media screen and (max-width: 1023px) {
+  .header_info {
+    padding: 5px 10px;
+  }
 }
 
 .authorization {

@@ -3,21 +3,33 @@
 	color: $grey02;
 	display: flex;
 	justify-content: space-between;
-	height: 12vw;
+	height: 8vw;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
 
 	&_logo {
-		height: 12vw;
+		height: 8vw;
 	}
 
 	&_title {
 		padding: 10px;
-		font-size: 3vw;
+		font-size: 2.5vw;
+
+		@include respond-to(mobile) {
+			padding: 5px 10px;
+		}
 	}
 
 	&_info {
-		font-size: 2vw;
+		font-size: 1.8vw;
 		padding: 10px;
-	}
+
+		@include respond-to(mobile) {
+			padding: 5px 10px;
+		}
+	} 
 }
 
 .authorization {
