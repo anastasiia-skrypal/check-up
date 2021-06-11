@@ -5,6 +5,10 @@
   src: url("../fonts/iconfont.eot?#iefix") format("eot"), url("../fonts/iconfont.woff2") format("woff2"), url("../fonts/iconfont.woff") format("woff"), url("../fonts/iconfont.ttf") format("truetype"), url("../fonts/iconfont.svg#iconfont") format("svg");
 }
 
+.nav_item {
+  font-size: calc(25px + 1vw);
+}
+
 .nav_checkup:before, .nav_profile:before {
   font-family: "iconfont";
   -webkit-font-smoothing: antialiased;
@@ -62,6 +66,25 @@
   line-height: 6vw;
   -webkit-box-shadow: 2px 2px 5px #c0a5ac, -3px -2px 3px #f9ecf1;
           box-shadow: 2px 2px 5px #c0a5ac, -3px -2px 3px #f9ecf1;
+}
+
+@media screen and (min-width: 1400px) {
+  .nav_profile:before, .nav_checkup:before {
+    line-height: calc(50px + 1vw);
+    font-size: calc(25px + 1vw);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .nav_item {
+    font-size: 3vw;
+    line-height: calc(3vw + 10px);
+  }
+
+  .exit {
+    font-size: 3vw;
+    line-height: 5vw;
+  }
 }
 
 body, p, ul, li, h1, h2, h3, h4, h5, h6 {
@@ -237,9 +260,23 @@ body {
   margin-right: 60vw;
 }
 
+@media screen and (max-width: 768px) {
+  .nav_list .nav_checkup {
+    margin-right: 55vw;
+  }
+}
+
 .nav_link {
-  font-size: 2vw;
+  font-size: calc(10px + 1vw);
   color: #80060b;
+}
+
+@media screen and (max-width: 768px) {
+  .nav_link {
+    font-size: calc(8px + 1vw);
+    line-height: calc(10 + 1vw);
+    text-align: center;
+  }
 }
 
 .exit {
@@ -284,11 +321,11 @@ body {
   margin-left: 50vw;
 }
 
-.profile .title::after {
+/* .profile .title::after {
   clear: both;
   content: '';
   display: table;
-}
+} */
 
 @media screen and (max-width: 1023px) {
   .profile .title {
@@ -300,9 +337,11 @@ body {
 
 .profile .title_result {
   text-align: left;
-  margin: 5px;
+  margin: 10px;
   font-size: -webkit-calc( 12px + 1vw);
   font-size: calc( 12px + 1vw);
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 1023px) {
@@ -374,6 +413,7 @@ body {
 
 .dial_desktop {
   width: 60vw;
+  height: 300px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -395,10 +435,10 @@ body {
 }
 
 .dial_item {
-  width: 10vw;
-  height: 10vw;
+  width: 8vw;
+  height: 8vw;
   text-align: center;
-  line-height: 10vw;
+  line-height: 8vw;
   font-size: 2vw;
   width: 30%;
   background: url(../img/background.png) no-repeat center;
@@ -419,13 +459,20 @@ body {
 .avthorization .title {
   font-size: -webkit-calc(16px + 2vw);
   font-size: calc(16px + 2vw);
-  margin-top: -5vw;
+  margin-top: -6vw;
 }
 
 @media screen and (max-width: 1023px) {
   .avthorization .title {
+    font-size: 3vw;
+    margin-top: -25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .avthorization .title {
     font-size: 5vw;
-    margin-top: 5vw;
+    margin-top: 1vw;
   }
 }
 
@@ -440,13 +487,13 @@ body {
 
 @media screen and (max-width: 1023px) {
   .avthorization .main_description {
-    font-size: 4vw;
-    margin-top: 10vw;
+    font-size: 2.5vw;
+    margin-top: 4vw;
   }
 }
 
 .avthorization .dial_error {
-  font-size: 1.8vw;
+  font-size: 1.5vw;
   color: #85060d;
 }
 
@@ -471,7 +518,7 @@ body {
 @media screen and (max-width: 1023px) {
   .avthorization .dial_input {
     font-size: 2.5vw;
-    margin-top: 10vw;
+    margin-top: 7vw;
     width: 100%;
     text-align: center;
   }
@@ -510,7 +557,7 @@ body {
         -ms-transform: translate(-50%, 0);
             transform: translate(-50%, 0);
     position: absolute;
-    bottom: 10vw;
+    bottom: 15vw;
   }
 }
 
@@ -537,13 +584,20 @@ body {
 }
 
 .header_title {
+  position: absolute;
+  top: 1vw;
+  left: calc(15px + 8vw);
   padding: 10px;
-  font-size: 2.5vw;
+  font-size: calc(3px + 1vw);
+  text-align: left;
 }
 
 @media screen and (max-width: 1023px) {
   .header_title {
-    padding: 5px 10px;
+    padding: 0;
+    position: absolute;
+    top: 1vw;
+    font-size: calc(3px + 0.8vw);
   }
 }
 
