@@ -170,14 +170,14 @@ body {
 .description_article {
   color: #7a6767;
   font-size: -webkit-calc(12px + 1vw);
-  font-size: calc(12px + 1vw);
-  margin-bottom: 3vw;
+  font-size: 20px;
+  margin-bottom: 2vw;
 }
 
-@media screen and (max-width: 1023px) {
+@media screen and (max-width: 768px) {
   .description_article {
     font-size: -webkit-calc(12px + 1.5vw);
-    font-size: calc(12px + 1.5vw);
+    font-size: calc(12px + 1vw);
     margin-bottom: 5vw;
   }
 }
